@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BookmarkBrain - Terms & Privacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1f3449;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 40px 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 36px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p, li {
+      font-size: 14px;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .highlight {
+      background: rgba(59, 130, 246, 0.2);
+      border-left: 3px solid #3b82f6;
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .last-updated {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BookmarkBrain</h1>
+    <p class="subtitle">Terms & Privacy</p>
+
+    <div class="card">
+      <div class="highlight">
+        <strong>Summary:</strong> BookmarkBrain processes your bookmark titles and URLs locally and via Google's Gemini API to organize them. We don't collect, store, or sell any of your personal data.
+      </div>
+    </div>
+
+    <h2>What Data We Access</h2>
+    <p>BookmarkBrain accesses the following data from your browser:</p>
+    <ul>
+      <li><strong>Bookmark titles and URLs</strong> - Required to analyze and categorize your bookmarks</li>
+      <li><strong>Your Gemini API key</strong> - Stored locally in Chrome's sync storage so you don't have to re-enter it</li>
+    </ul>
+
+    <h2>How We Use Your Data</h2>
+    <p>Your bookmark data (titles and URLs only) is sent to Google's Gemini API for AI-powered categorization. This is the core functionality of the extension.</p>
+    <ul>
+      <li>Bookmark data is transmitted securely over HTTPS</li>
+      <li>Data is only sent when you click "Organize My Bookmarks"</li>
+      <li>We do not store your bookmarks on any server</li>
+      <li>We do not track your browsing history</li>
+    </ul>
+
+    <h2>Third-Party Services</h2>
+    <p>BookmarkBrain uses <strong>Google Gemini API</strong> to analyze and categorize your bookmarks. When you use the extension:</p>
+    <ul>
+      <li>Your bookmark titles and URLs are sent to Google's servers</li>
+      <li>Google's <a href="https://ai.google.dev/terms" target="_blank">Gemini API Terms of Service</a> and <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> apply to this data</li>
+      <li>You provide your own API key, meaning you have a direct relationship with Google for this service</li>
+    </ul>
+
+    <h2>Data Storage</h2>
+    <p>BookmarkBrain stores minimal data locally:</p>
+    <ul>
+      <li><strong>API Key</strong> - Stored in Chrome's sync storage (encrypted by Chrome, synced across your devices if signed in)</li>
+      <li><strong>No bookmark data is stored</strong> - Bookmarks are read fresh each time you use the extension</li>
+      <li><strong>No analytics or tracking</strong> - We don't use any analytics services</li>
+    </ul>
+
+    <h2>Data We Don't Collect</h2>
+    <ul>
+      <li>Personal information (name, email, etc.)</li>
+      <li>Browsing history</li>
+      <li>Cookies or tracking data</li>
+      <li>Usage statistics</li>
+      <li>Any data for advertising purposes</li>
+    </ul>
+
+    <h2>Automatic Backups</h2>
+    <p>Before reorganizing your bookmarks, BookmarkBrain automatically creates a backup:</p>
+    <ul>
+      <li>Your original bookmarks are moved to a dated folder in "Other Bookmarks"</li>
+      <li>Backup folders are named "Backup YYYY-MM-DD" (e.g., "Backup 2025-01-28")</li>
+      <li>To restore: manually move bookmarks from the backup folder back to your Bookmarks Bar</li>
+      <li>Backups are never automatically deleted - you control when to remove them</li>
+    </ul>
+
+    <h2>Your Control</h2>
+    <p>You have full control over your data:</p>
+    <ul>
+      <li>Remove the extension at any time to stop all data access</li>
+      <li>Delete your API key from settings</li>
+      <li>Restore bookmarks anytime from backup folders in "Other Bookmarks"</li>
+    </ul>
+
+    <h2>Security</h2>
+    <ul>
+      <li>All API communications use HTTPS encryption</li>
+      <li>Your API key is stored using Chrome's secure storage API</li>
+      <li>The extension requests only the minimum permissions needed</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we make changes to this privacy policy, we will update the "Last Updated" date below. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this privacy policy, please open an issue on our <a href="https://github.com/sixteen-dev/bookmarkbrain" target="_blank">GitHub repository</a>.</p>
+
+    <p class="last-updated">Last Updated: January 2025</p>
+  </div>
+</body>
+</html>

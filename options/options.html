@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>BookmarkBrain Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1f3449;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 32px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-family: monospace;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+
+    .help-text {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 8px;
+    }
+
+    .help-text a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .help-text a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      margin-left: 12px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .status {
+      margin-left: auto;
+      font-size: 13px;
+    }
+
+    .status.success {
+      color: #10b981;
+    }
+
+    .status.error {
+      color: #ef4444;
+    }
+
+    .toggle-visibility {
+      background: none;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .toggle-visibility:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>BookmarkBrain</h1>
+    <p class="subtitle">Settings</p>
+
+    <div class="card">
+      <h2>Gemini API Key</h2>
+      <label for="api-key">Your API Key</label>
+      <input type="password" id="api-key" placeholder="AIza...">
+      <button class="toggle-visibility" id="toggle-key">Show key</button>
+      <p class="help-text">
+        Get your free API key from <a href="https://aistudio.google.com/apikey" target="_blank">aistudio.google.com</a><br>
+        Free tier: No credit card required, 15 req/min
+      </p>
+
+      <div class="actions">
+        <button class="btn btn-primary" id="save-btn">Save</button>
+        <button class="btn btn-secondary" id="test-btn">Test Connection</button>
+        <span class="status" id="status"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>How It Works</h2>
+      <p class="help-text" style="line-height: 1.6;">
+        1. Click the BookmarkBrain icon in your toolbar<br>
+        2. Click "Organize My Bookmarks"<br>
+        3. AI analyzes and reorganizes your bookmarks into smart folders<br>
+        4. Your old bookmarks are automatically backed up in "Other Bookmarks"
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Terms & Privacy</h2>
+      <p class="help-text" style="line-height: 1.6;">
+        Your bookmarks are sent to Google Gemini API for categorization. We don't collect or store any personal data. Backups are saved in "Other Bookmarks".
+        <br><br>
+        <a href="../privacy-policy.html" target="_blank">Read full Terms & Privacy</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

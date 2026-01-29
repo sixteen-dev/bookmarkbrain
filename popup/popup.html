@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>BookmarkBrain</h1>
+      <p class="tagline">AI-powered bookmark organizer</p>
+    </header>
+
+    <div id="no-api-key" class="section hidden">
+      <p class="warning">No API key configured</p>
+      <button id="open-options" class="btn btn-secondary">Set up API Key</button>
+    </div>
+
+    <div id="main-content" class="section hidden">
+      <div class="stats">
+        <div class="stat">
+          <span id="bookmark-count" class="stat-value">-</span>
+          <span class="stat-label">Bookmarks</span>
+        </div>
+        <div class="stat">
+          <span id="folder-count" class="stat-value">-</span>
+          <span class="stat-label">Folders</span>
+        </div>
+      </div>
+
+      <div class="options">
+        <label class="option">
+          <input type="checkbox" id="validate-urls" checked>
+          <span>Check for dead links</span>
+        </label>
+        <label class="option">
+          <input type="number" id="max-folders" min="3" max="30" placeholder="Auto">
+          <span>Max folders (optional)</span>
+        </label>
+      </div>
+
+      <button id="organize-btn" class="btn btn-primary">
+        Organize My Bookmarks
+      </button>
+      <p class="backup-note">Your old bookmarks are backed up in "Other Bookmarks"</p>
+    </div>
+
+    <div id="progress-section" class="section hidden">
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <p id="progress-text" class="progress-text">Starting...</p>
+        <button id="cancel-progress-btn" class="btn btn-secondary" style="margin-top: 16px;">Cancel</button>
+      </div>
+    </div>
+
+
+    <div id="done-section" class="section hidden">
+      <div class="success">
+        <span class="success-icon">✓</span>
+        <h2>Done!</h2>
+        <p id="done-message">Your bookmarks have been organized.</p>
+      </div>
+    </div>
+
+    <div id="error-section" class="section hidden">
+      <div class="error">
+        <span class="error-icon">✕</span>
+        <p id="error-message"></p>
+        <button id="retry-btn" class="btn btn-secondary">Try Again</button>
+      </div>
+    </div>
+
+    <footer>
+      <a href="#" id="settings-link">Settings</a>
+    </footer>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
